@@ -1,0 +1,13 @@
+C:\xampp\htdocs\visual\Control\Control\bin\Debug\Control.exe.config
+C:\xampp\htdocs\visual\Control\Control\bin\Debug\Control.exe
+C:\xampp\htdocs\visual\Control\Control\bin\Debug\Control.pdb
+C:\xampp\htdocs\visual\Control\Control\bin\Debug\Control.xml
+C:\xampp\htdocs\visual\Control\Control\obj\Debug\Control.vbprojAssemblyReference.cache
+C:\xampp\htdocs\visual\Control\Control\obj\Debug\Control.Form1.resources
+C:\xampp\htdocs\visual\Control\Control\obj\Debug\Control.Resources.resources
+C:\xampp\htdocs\visual\Control\Control\obj\Debug\Control.vbproj.GenerateResource.cache
+C:\xampp\htdocs\visual\Control\Control\obj\Debug\Control.vbproj.CoreCompileInputs.cache
+C:\xampp\htdocs\visual\Control\Control\obj\Debug\Control.exe
+C:\xampp\htdocs\visual\Control\Control\obj\Debug\Control.xml
+C:\xampp\htdocs\visual\Control\Control\obj\Debug\Control.pdb
+C:\xampp\htdocs\visual\Control\Control\obj\Debug\Control.Conexion.resources
