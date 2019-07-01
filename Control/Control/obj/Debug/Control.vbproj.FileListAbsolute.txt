@@ -11,3 +11,16 @@ C:\xampp\htdocs\visual\Control\Control\obj\Debug\Control.exe
 C:\xampp\htdocs\visual\Control\Control\obj\Debug\Control.xml
 C:\xampp\htdocs\visual\Control\Control\obj\Debug\Control.pdb
 C:\xampp\htdocs\visual\Control\Control\obj\Debug\Control.Conexion.resources
+C:\Users\Calolo\Source\Repos\control_visual\Control\Control\bin\Debug\Control.exe.config
+C:\Users\Calolo\Source\Repos\control_visual\Control\Control\bin\Debug\Control.exe
+C:\Users\Calolo\Source\Repos\control_visual\Control\Control\bin\Debug\Control.pdb
+C:\Users\Calolo\Source\Repos\control_visual\Control\Control\bin\Debug\Control.xml
+C:\Users\Calolo\Source\Repos\control_visual\Control\Control\obj\Debug\Control.vbprojAssemblyReference.cache
+C:\Users\Calolo\Source\Repos\control_visual\Control\Control\obj\Debug\Control.Conexion.resources
+C:\Users\Calolo\Source\Repos\control_visual\Control\Control\obj\Debug\Control.Form1.resources
+C:\Users\Calolo\Source\Repos\control_visual\Control\Control\obj\Debug\Control.Resources.resources
+C:\Users\Calolo\Source\Repos\control_visual\Control\Control\obj\Debug\Control.vbproj.GenerateResource.cache
+C:\Users\Calolo\Source\Repos\control_visual\Control\Control\obj\Debug\Control.vbproj.CoreCompileInputs.cache
+C:\Users\Calolo\Source\Repos\control_visual\Control\Control\obj\Debug\Control.exe
+C:\Users\Calolo\Source\Repos\control_visual\Control\Control\obj\Debug\Control.xml
+C:\Users\Calolo\Source\Repos\control_visual\Control\Control\obj\Debug\Control.pdb

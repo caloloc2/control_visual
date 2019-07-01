@@ -24,7 +24,6 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Zona1 = New System.Windows.Forms.GroupBox()
-        Me.Z1_F = New System.Windows.Forms.PictureBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Z1_B = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -43,7 +42,6 @@ Partial Class Form1
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Zona2 = New System.Windows.Forms.GroupBox()
-        Me.Z2_F = New System.Windows.Forms.PictureBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Z2_B = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -73,16 +71,30 @@ Partial Class Form1
         Me.Estado_Conexion = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Timer = New System.Windows.Forms.Timer(Me.components)
         Me.Puerto_Serie = New System.IO.Ports.SerialPort(Me.components)
+        Me.Z1_F = New System.Windows.Forms.TextBox()
+        Me.Z2_F = New System.Windows.Forms.TextBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Z3_F = New System.Windows.Forms.TextBox()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Z3_B = New System.Windows.Forms.TextBox()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Z3_H = New System.Windows.Forms.TextBox()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Z3_T = New System.Windows.Forms.TextBox()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Label32 = New System.Windows.Forms.Label()
         Me.Zona1.SuspendLayout()
-        CType(Me.Z1_F, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuPrincipal.SuspendLayout()
         Me.Zona2.SuspendLayout()
-        CType(Me.Z2_F, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Seteo.SuspendLayout()
         Me.Actuadores.SuspendLayout()
         CType(Me.A_V, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.A_M, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Barra_Estado.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Zona1
@@ -104,15 +116,6 @@ Partial Class Form1
         Me.Zona1.Size = New System.Drawing.Size(207, 186)
         Me.Zona1.TabIndex = 0
         Me.Zona1.TabStop = False
-        '
-        'Z1_F
-        '
-        Me.Z1_F.BackColor = System.Drawing.Color.Gray
-        Me.Z1_F.Location = New System.Drawing.Point(111, 109)
-        Me.Z1_F.Name = "Z1_F"
-        Me.Z1_F.Size = New System.Drawing.Size(50, 20)
-        Me.Z1_F.TabIndex = 12
-        Me.Z1_F.TabStop = False
         '
         'Label8
         '
@@ -146,9 +149,9 @@ Partial Class Form1
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(18, 109)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(41, 15)
+        Me.Label6.Size = New System.Drawing.Size(39, 15)
         Me.Label6.TabIndex = 7
-        Me.Label6.Text = "Flama"
+        Me.Label6.Text = "Humo"
         '
         'Label4
         '
@@ -219,7 +222,7 @@ Partial Class Form1
         Me.MenuPrincipal.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpcionesToolStripMenuItem})
         Me.MenuPrincipal.Location = New System.Drawing.Point(0, 0)
         Me.MenuPrincipal.Name = "MenuPrincipal"
-        Me.MenuPrincipal.Size = New System.Drawing.Size(446, 24)
+        Me.MenuPrincipal.Size = New System.Drawing.Size(660, 24)
         Me.MenuPrincipal.TabIndex = 1
         Me.MenuPrincipal.Text = "MenuStrip1"
         '
@@ -273,15 +276,6 @@ Partial Class Form1
         Me.Zona2.TabIndex = 13
         Me.Zona2.TabStop = False
         '
-        'Z2_F
-        '
-        Me.Z2_F.BackColor = System.Drawing.Color.Gray
-        Me.Z2_F.Location = New System.Drawing.Point(111, 109)
-        Me.Z2_F.Name = "Z2_F"
-        Me.Z2_F.Size = New System.Drawing.Size(50, 20)
-        Me.Z2_F.TabIndex = 12
-        Me.Z2_F.TabStop = False
-        '
         'Label9
         '
         Me.Label9.AutoSize = True
@@ -314,9 +308,9 @@ Partial Class Form1
         Me.Label11.AutoSize = True
         Me.Label11.Location = New System.Drawing.Point(18, 109)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(41, 15)
+        Me.Label11.Size = New System.Drawing.Size(39, 15)
         Me.Label11.TabIndex = 7
-        Me.Label11.Text = "Flama"
+        Me.Label11.Text = "Humo"
         '
         'Label12
         '
@@ -391,7 +385,7 @@ Partial Class Form1
         Me.Seteo.Controls.Add(Me.S_T)
         Me.Seteo.Controls.Add(Me.Label23)
         Me.Seteo.Controls.Add(Me.Label24)
-        Me.Seteo.Location = New System.Drawing.Point(12, 219)
+        Me.Seteo.Location = New System.Drawing.Point(123, 219)
         Me.Seteo.Name = "Seteo"
         Me.Seteo.Size = New System.Drawing.Size(207, 120)
         Me.Seteo.TabIndex = 13
@@ -468,7 +462,7 @@ Partial Class Form1
         Me.Actuadores.Controls.Add(Me.A_M)
         Me.Actuadores.Controls.Add(Me.Label17)
         Me.Actuadores.Controls.Add(Me.Label26)
-        Me.Actuadores.Location = New System.Drawing.Point(225, 219)
+        Me.Actuadores.Location = New System.Drawing.Point(336, 219)
         Me.Actuadores.Name = "Actuadores"
         Me.Actuadores.Size = New System.Drawing.Size(207, 120)
         Me.Actuadores.TabIndex = 14
@@ -523,9 +517,9 @@ Partial Class Form1
         'Barra_Estado
         '
         Me.Barra_Estado.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Estado_Conexion})
-        Me.Barra_Estado.Location = New System.Drawing.Point(0, 355)
+        Me.Barra_Estado.Location = New System.Drawing.Point(0, 353)
         Me.Barra_Estado.Name = "Barra_Estado"
-        Me.Barra_Estado.Size = New System.Drawing.Size(446, 22)
+        Me.Barra_Estado.Size = New System.Drawing.Size(660, 22)
         Me.Barra_Estado.TabIndex = 15
         Me.Barra_Estado.Text = "StatusStrip1"
         '
@@ -541,12 +535,160 @@ Partial Class Form1
         '
         Me.Timer.Interval = 500
         '
+        'Z1_F
+        '
+        Me.Z1_F.Location = New System.Drawing.Point(111, 106)
+        Me.Z1_F.Name = "Z1_F"
+        Me.Z1_F.ReadOnly = True
+        Me.Z1_F.Size = New System.Drawing.Size(50, 23)
+        Me.Z1_F.TabIndex = 13
+        Me.Z1_F.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Z2_F
+        '
+        Me.Z2_F.Location = New System.Drawing.Point(111, 106)
+        Me.Z2_F.Name = "Z2_F"
+        Me.Z2_F.ReadOnly = True
+        Me.Z2_F.Size = New System.Drawing.Size(50, 23)
+        Me.Z2_F.TabIndex = 14
+        Me.Z2_F.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.Z3_F)
+        Me.GroupBox1.Controls.Add(Me.Label19)
+        Me.GroupBox1.Controls.Add(Me.Z3_B)
+        Me.GroupBox1.Controls.Add(Me.Label25)
+        Me.GroupBox1.Controls.Add(Me.Label27)
+        Me.GroupBox1.Controls.Add(Me.Label28)
+        Me.GroupBox1.Controls.Add(Me.Z3_H)
+        Me.GroupBox1.Controls.Add(Me.Label29)
+        Me.GroupBox1.Controls.Add(Me.Label30)
+        Me.GroupBox1.Controls.Add(Me.Z3_T)
+        Me.GroupBox1.Controls.Add(Me.Label31)
+        Me.GroupBox1.Controls.Add(Me.Label32)
+        Me.GroupBox1.Location = New System.Drawing.Point(441, 27)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(207, 186)
+        Me.GroupBox1.TabIndex = 15
+        Me.GroupBox1.TabStop = False
+        '
+        'Z3_F
+        '
+        Me.Z3_F.Location = New System.Drawing.Point(111, 106)
+        Me.Z3_F.Name = "Z3_F"
+        Me.Z3_F.ReadOnly = True
+        Me.Z3_F.Size = New System.Drawing.Size(50, 23)
+        Me.Z3_F.TabIndex = 14
+        Me.Z3_F.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(167, 138)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(16, 15)
+        Me.Label19.TabIndex = 11
+        Me.Label19.Text = "%"
+        '
+        'Z3_B
+        '
+        Me.Z3_B.Location = New System.Drawing.Point(111, 135)
+        Me.Z3_B.Name = "Z3_B"
+        Me.Z3_B.ReadOnly = True
+        Me.Z3_B.Size = New System.Drawing.Size(50, 23)
+        Me.Z3_B.TabIndex = 10
+        Me.Z3_B.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(18, 138)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(47, 15)
+        Me.Label25.TabIndex = 9
+        Me.Label25.Text = "Bateria"
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Location = New System.Drawing.Point(18, 109)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(39, 15)
+        Me.Label27.TabIndex = 7
+        Me.Label27.Text = "Humo"
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Location = New System.Drawing.Point(167, 80)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(16, 15)
+        Me.Label28.TabIndex = 6
+        Me.Label28.Text = "%"
+        '
+        'Z3_H
+        '
+        Me.Z3_H.Location = New System.Drawing.Point(111, 77)
+        Me.Z3_H.Name = "Z3_H"
+        Me.Z3_H.ReadOnly = True
+        Me.Z3_H.Size = New System.Drawing.Size(50, 23)
+        Me.Z3_H.TabIndex = 5
+        Me.Z3_H.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Location = New System.Drawing.Point(18, 80)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(59, 15)
+        Me.Label29.TabIndex = 4
+        Me.Label29.Text = "Humedad"
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Location = New System.Drawing.Point(167, 51)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(21, 15)
+        Me.Label30.TabIndex = 3
+        Me.Label30.Text = "° C"
+        '
+        'Z3_T
+        '
+        Me.Z3_T.Location = New System.Drawing.Point(111, 48)
+        Me.Z3_T.Name = "Z3_T"
+        Me.Z3_T.ReadOnly = True
+        Me.Z3_T.Size = New System.Drawing.Size(50, 23)
+        Me.Z3_T.TabIndex = 2
+        Me.Z3_T.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Location = New System.Drawing.Point(18, 51)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(76, 15)
+        Me.Label31.TabIndex = 1
+        Me.Label31.Text = "Temperatura"
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.Location = New System.Drawing.Point(12, 19)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(49, 15)
+        Me.Label32.TabIndex = 0
+        Me.Label32.Text = "ZONA 3"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
-        Me.ClientSize = New System.Drawing.Size(446, 377)
+        Me.ClientSize = New System.Drawing.Size(660, 375)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Barra_Estado)
         Me.Controls.Add(Me.Actuadores)
         Me.Controls.Add(Me.Seteo)
@@ -565,12 +707,10 @@ Partial Class Form1
         Me.Text = "Sistema de Control"
         Me.Zona1.ResumeLayout(False)
         Me.Zona1.PerformLayout()
-        CType(Me.Z1_F, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuPrincipal.ResumeLayout(False)
         Me.MenuPrincipal.PerformLayout()
         Me.Zona2.ResumeLayout(False)
         Me.Zona2.PerformLayout()
-        CType(Me.Z2_F, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Seteo.ResumeLayout(False)
         Me.Seteo.PerformLayout()
         Me.Actuadores.ResumeLayout(False)
@@ -579,13 +719,14 @@ Partial Class Form1
         CType(Me.A_M, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Barra_Estado.ResumeLayout(False)
         Me.Barra_Estado.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Zona1 As GroupBox
-    Friend WithEvents Z1_F As PictureBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Z1_B As TextBox
     Friend WithEvents Label7 As Label
@@ -603,7 +744,6 @@ Partial Class Form1
     Friend WithEvents ToolStripMenuItem1 As ToolStripSeparator
     Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Zona2 As GroupBox
-    Friend WithEvents Z2_F As PictureBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Z2_B As TextBox
     Friend WithEvents Label10 As Label
@@ -634,4 +774,19 @@ Partial Class Form1
     Friend WithEvents Timer As Timer
     Friend WithEvents Puerto_Serie As IO.Ports.SerialPort
     Friend WithEvents ConectarAlDispositivoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Z1_F As TextBox
+    Friend WithEvents Z2_F As TextBox
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Z3_F As TextBox
+    Friend WithEvents Label19 As Label
+    Friend WithEvents Z3_B As TextBox
+    Friend WithEvents Label25 As Label
+    Friend WithEvents Label27 As Label
+    Friend WithEvents Label28 As Label
+    Friend WithEvents Z3_H As TextBox
+    Friend WithEvents Label29 As Label
+    Friend WithEvents Label30 As Label
+    Friend WithEvents Z3_T As TextBox
+    Friend WithEvents Label31 As Label
+    Friend WithEvents Label32 As Label
 End Class

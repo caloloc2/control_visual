@@ -54,46 +54,50 @@
     End Sub
 
     Private Sub Analisis(valor As String)
-        Dim campos() As String = valor.Split("*")
         Try
-            Z1_T.Text = campos(0)
-            Z1_H.Text = campos(1)
-            Z2_T.Text = campos(2)
-            Z2_H.Text = campos(3)
+            Dim separa() As String = valor.Split("/")
+            Dim campos() As String = separa(2).Split("*")
 
-            If campos(4) = "0" Then
-                Z1_F.BackColor = Color.Gray
-            Else
-                Z1_F.BackColor = Color.Red
-            End If
-
-            If campos(5) = "0" Then
-                Z2_F.BackColor = Color.Gray
-            Else
-                Z2_F.BackColor = Color.Red
-            End If
-
-            Z1_B.Text = campos(6)
-            Z2_B.Text = campos(7)
-
-            If IsNumeric(campos(0)) And IsNumeric(campos(2)) Then
-                Dim temp1 As Double = CDbl(campos(0))
-                Dim temp2 As Double = CDbl(campos(2))
-                Dim promedio As Double = (temp1 + temp2) / 2
-
-                Dim temp_seteo As Double = CDbl(S_T.Text)
-
-                If promedio > temp_seteo Then
-                    A_M.BackColor = Color.Red
-                    A_V.BackColor = Color.Orange
-                Else
-                    A_M.BackColor = Color.Gray
-                    A_V.BackColor = Color.Gray
-                End If
-            End If
+            Select Case Trim(separa(0))
+                Case "1" ' XBEE 1
+                    Z1_T.Text = campos(0)
+                    Z1_H.Text = campos(1)
+                    Z1_F.Text = campos(2)
+                    Z1_B.Text = campos(3)
+                Case "2" ' XBEE 2
+                    Z2_T.Text = campos(0)
+                    Z2_H.Text = campos(1)
+                    Z2_F.Text = campos(2)
+                    Z2_B.Text = campos(3)
+                Case "3" ' XBEE 3                    
+                    Z3_T.Text = campos(0)
+                    Z3_H.Text = campos(1)
+                    Z3_F.Text = campos(2)
+                    Z3_B.Text = campos(3)
+            End Select
         Catch ex As Exception
 
         End Try
+
+        'Try
+        '    If IsNumeric(campos(0)) And IsNumeric(campos(2)) Then
+        '        Dim temp1 As Double = CDbl(campos(0))
+        '        Dim temp2 As Double = CDbl(campos(2))
+        '        Dim promedio As Double = (temp1 + temp2) / 2
+
+        '        Dim temp_seteo As Double = CDbl(S_T.Text)
+
+        '        If promedio > temp_seteo Then
+        '            A_M.BackColor = Color.Red
+        '            A_V.BackColor = Color.Orange
+        '        Else
+        '            A_M.BackColor = Color.Gray
+        '            A_V.BackColor = Color.Gray
+        '        End If
+        '    End If
+        'Catch ex As Exception
+
+        'End Try
     End Sub
 
     Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
